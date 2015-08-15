@@ -19,13 +19,6 @@ public class RegionsDefaultVOTest {
         ViewObject view = fixture1.getApplicationModule().findViewObject("RegionsDefault");
         assertNotNull(view);
     }
-    
-    @Test(expected = AttrValException.class)
-    public void testEmailFormat() {
-        ViewObject view = fixture1.getApplicationModule().findViewObject("EmployeesDefault");
-        oracle.jbo.Row row = view.createRow();
-        row.setAttribute("Email", "not.an.email.com");
-    }
 
     @Before
     public void setUp() {
