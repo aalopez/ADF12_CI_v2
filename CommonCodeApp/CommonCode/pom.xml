@@ -27,32 +27,6 @@
                 </includes>
             </resource>
         </resources>
-        <plugins>
-            <!-- Overrides parent configuration -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
-                <executions>
-                    <execution>
-                        <id>default-jar</id>
-                        <phase>package</phase>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- Overrides parent configuration -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
-                <executions>
-                    <execution>
-                        <id>default-install</id>
-                        <phase>install</phase>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
         <testSourceDirectory>../CommonCodeTest/src/</testSourceDirectory>
         <testResources>
             <testResource>
