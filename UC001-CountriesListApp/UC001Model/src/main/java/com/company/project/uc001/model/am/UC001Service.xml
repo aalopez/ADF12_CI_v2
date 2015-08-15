@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UC001Service"
+  Version="12.1.3.10.8"
+  InheritPersonalization="merge"
+  ClearCacheOnRollback="true">
+  <ViewUsage
+    Name="Regions"
+    ViewObjectName="com.company.project.uc001.model.vo.RegionsVO"/>
+  <ViewUsage
+    Name="Countries"
+    ViewObjectName="com.company.project.uc001.model.vo.CountriesVO"/>
+  <ViewLinkUsage
+    Name="RegionsToCountriesVL"
+    ViewLinkObjectName="com.company.project.uc001.model.vo.link.RegionsToCountriesVL"
+    SrcViewUsageName="com.company.project.uc001.model.am.UC001Service.Regions"
+    DstViewUsageName="com.company.project.uc001.model.am.UC001Service.Countries"
+    Reversed="false"/>
+</AppModule>
