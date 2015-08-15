@@ -43,4 +43,7 @@
 **/temp/**
 **/WEB-INF/classes/jsp_servlet/**
 **/WEB-INF/temp/**
-**/target/**
+
+#Added manually
+target/
+*.lck
