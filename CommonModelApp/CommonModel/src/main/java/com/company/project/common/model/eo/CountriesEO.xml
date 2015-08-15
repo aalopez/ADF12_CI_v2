@@ -10,7 +10,8 @@
   DBObjectName="COUNTRIES"
   AliasName="CountriesEO"
   BindingStyle="OracleName"
-  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation"
+  RowClass="com.company.project.common.code.fwk.EntityImpl">
   <Attribute
     Name="CountryId"
     IsNotNull="true"

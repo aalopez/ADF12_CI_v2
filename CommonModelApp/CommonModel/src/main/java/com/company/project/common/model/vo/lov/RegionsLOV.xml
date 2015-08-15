@@ -12,7 +12,9 @@
   BindingStyle="OracleName"
   CustomQuery="false"
   SelectAllAttributes="false"
-  PageIterMode="Full">
+  PageIterMode="Full"
+  RowClass="com.company.project.common.code.fwk.ViewRowImpl"
+  ComponentClass="com.company.project.common.code.fwk.ViewObjectImpl">
   <EntityUsage
     Name="RegionsEO"
     Entity="com.company.project.common.model.eo.RegionsEO"

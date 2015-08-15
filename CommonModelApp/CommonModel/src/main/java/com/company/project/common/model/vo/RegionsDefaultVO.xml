@@ -13,7 +13,9 @@
   CustomQuery="false"
   SelectAllAttributes="false"
   PageIterMode="Full"
-  IsLibraryPrivate="true">
+  IsLibraryPrivate="true"
+  RowClass="com.company.project.common.code.fwk.ViewRowImpl"
+  ComponentClass="com.company.project.common.code.fwk.ViewObjectImpl">
   <EntityUsage
     Name="RegionsEO"
     Entity="com.company.project.common.model.eo.RegionsEO"/>

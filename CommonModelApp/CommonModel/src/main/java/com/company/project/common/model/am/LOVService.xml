@@ -6,7 +6,8 @@
   Name="LOVService"
   Version="12.1.3.10.8"
   InheritPersonalization="merge"
-  ClearCacheOnRollback="true">
+  ClearCacheOnRollback="true"
+  ComponentClass="com.company.project.common.code.fwk.ApplicationModuleImpl">
   <ViewUsage
     Name="RegionsLOV"
     ViewObjectName="com.company.project.common.model.vo.lov.RegionsLOV"/>
