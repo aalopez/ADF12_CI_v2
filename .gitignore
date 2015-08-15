@@ -47,3 +47,6 @@
 #Added manually
 target/
 *.lck
+deploy/
+classes/
+temp/
