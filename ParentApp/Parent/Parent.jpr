@@ -101,6 +101,7 @@
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
       <value n="internalEncoding" v="UTF8"/>
+      <value n="outOfProcess" v="true"/>
       <value n="webIANAEncoding" v="UTF-8"/>
    </hash>
    <hash n="oracle.jdeveloper.maven.compiler.MavenConfiguration">
