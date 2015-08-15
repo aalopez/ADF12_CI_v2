@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="UC001Model"
+  Version="12.1.3.10.8"
+  SeparateXMLFiles="true"
+  PackageName="com.company.project.uc001.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../../../UC001Model.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="HR"/>
+  </DesignTime>
+  <AppContainee
+    Name="CommonModel"
+    FullName="com.company.project.common.model.CommonModel"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="CommonModel-1.0-SNAPSHOT.jar"/>
+    </DesignTime>
+  </AppContainee>
+</JboProject>
