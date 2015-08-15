@@ -2,6 +2,7 @@ package com.company.project.common.model.test.view.RegionsDefaultVO;
 
 import com.company.project.common.model.test.applicationModule.DefaultAMFixture;
 
+import oracle.jbo.AttrValException;
 import oracle.jbo.ViewObject;
 
 import org.junit.*;
@@ -17,6 +18,13 @@ public class RegionsDefaultVOTest {
     public void testAccess() {
         ViewObject view = fixture1.getApplicationModule().findViewObject("RegionsDefault");
         assertNotNull(view);
+    }
+    
+    @Test(expected = AttrValException.class)
+    public void testEmailFormat() {
+        ViewObject view = fixture1.getApplicationModule().findViewObject("EmployeesDefault");
+        oracle.jbo.Row row = view.createRow();
+        row.setAttribute("Email", "not.an.email.com");
     }
 
     @Before
