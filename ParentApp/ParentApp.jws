@@ -43,14 +43,15 @@
                <value n="id" v="com.company.project.parent:Parent:1.0-SNAPSHOT:jar"/>
                <value n="locked" v="true"/>
             </hash>
+            <hash>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.company.project.parent:Parent:1.0-SNAPSHOT:pom"/>
+               <value n="id" v="com.company.project.parent:Parent:1.0-SNAPSHOT:pom"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
-      <list n="libraryReferences">
-         <hash>
-            <value n="id" v="com.company.project.parent:Parent:1.0-SNAPSHOT:jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-      </list>
+      <list n="libraryReferences"/>
    </hash>
    <hash n="oracle.jdeveloper.model.PathsConfiguration">
       <hash n="ApplicationSrcContentSet">

@@ -12,67 +12,6 @@
     <!-- sets oracle home path -->
     <oracleHome>/home/user/Oracle/Middleware/Oracle_Home</oracleHome>
   </properties>
-  <build>
-    <resources>
-      <resource>
-        <directory>${basedir}</directory>
-        <includes>
-          <include>*</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/resources/</directory>
-        <includes>
-          <include>*</include>
-        </includes>
-      </resource>
-    </resources>
-    <plugins>
-      <!-- Avoids default jar creation  since every project will use ojdeploy -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>2.6</version>
-        <executions>
-          <execution>
-            <id>default-jar</id>
-            <phase></phase>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- Avoids default installation since every project will install the ojdeploy result -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>2.5.2</version>
-        <executions>
-          <execution>
-            <id>default-install</id>
-            <phase></phase>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- Adds info to the classpath required for ADFBC Unit tests. This is a workaround https://blogs.oracle.com/groundside/entry/maven_and_adfbc_unit_tests -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.17</version>
-        <dependencies>
-          <dependency>
-            <groupId>org.apache.maven.surefire</groupId>
-            <artifactId>surefire-junit47</artifactId>
-            <version>2.17</version>
-          </dependency>
-        </dependencies>
-        <configuration>
-          <additionalClasspathElements>
-            <additionalClasspathElement>${basedir}/../.adf</additionalClasspathElement>
-            <additionalClasspathElement>${oraclehome}/oracle_common/modules/oracle.jps_12.1.3/jps-manifest.jar</additionalClasspathElement>
-          </additionalClasspathElements>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
   <distributionManagement>
     <repository>
       <id>central</id>

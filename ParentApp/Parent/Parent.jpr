@@ -64,15 +64,7 @@
          <list n="constituent-sets">
             <hash>
                <list n="pattern-filters">
-                  <string v="+*"/>
-               </list>
-               <list n="url-path">
-                  <url path="."/>
-               </list>
-            </hash>
-            <hash>
-               <list n="pattern-filters">
-                  <string v="+*"/>
+                  <string v="+**"/>
                </list>
                <list n="url-path">
                   <url path="src/main/resources/"/>
@@ -84,6 +76,14 @@
                </list>
                <list n="url-path">
                   <url path="src/main/scripts/"/>
+               </list>
+            </hash>
+            <hash>
+               <list n="pattern-filters">
+                  <string v="+pom.xml"/>
+               </list>
+               <list n="url-path">
+                  <url path="."/>
                </list>
             </hash>
          </list>
