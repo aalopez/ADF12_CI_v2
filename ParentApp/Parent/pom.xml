@@ -10,7 +10,7 @@
     <!-- Prevents encoding warning -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!-- sets oracle home path -->
-    <oraclehome>/home/user/Oracle/Middleware/Oracle_Home</oraclehome>
+    <oracleHome>/home/user/Oracle/Middleware/Oracle_Home</oracleHome>
   </properties>
   <build>
     <resources>
