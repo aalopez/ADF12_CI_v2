@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <af:pageTemplate viewId="/oracle/templates/tabletFirstTemplate.jspx" id="pt1">
+        <f:facet name="center">
+            <af:listView value="#{bindings.Regions.treeModel}" var="item"
+                         emptyText="#{bindings.Regions.viewable ? 'No data to display.' : 'Access Denied.'}"
+                         fetchSize="#{bindings.Regions.rangeSize}" id="lv1">
+                <af:listItem id="li1">
+                    <af:panelGroupLayout layout="horizontal" id="pgl1">
+                        <f:facet name="separator">
+                            <af:spacer width="10" id="s1"/>
+                        </f:facet>
+                        <af:outputFormatted value="#{item.bindings.CountryId.inputValue}" id="of1"/>
+                        <af:outputFormatted value="#{item.bindings.CountryName.inputValue}" id="of2"/>
+                    </af:panelGroupLayout>
+                </af:listItem>
+                <f:facet name="groupHeaderStamp">
+                    <af:listItem id="li2">
+                        <af:panelGroupLayout layout="horizontal" id="pgl2">
+                            <f:facet name="separator">
+                                <af:spacer width="10" id="s2"/>
+                            </f:facet>
+                            <af:outputFormatted value="#{item.bindings.RegionName.inputValue}" id="of3"/>
+                        </af:panelGroupLayout>
+                    </af:listItem>
+                </f:facet>
+            </af:listView>
+        </f:facet>
+        <f:attribute name="showAppNavbar" value="false"/>
+        <f:attribute name="showFooter" value="false"/>
+        <f:attribute name="startWidth" value="0px"/>
+        <f:attribute name="endWidth" value="0px"/>
+    </af:pageTemplate>
+</ui:composition>

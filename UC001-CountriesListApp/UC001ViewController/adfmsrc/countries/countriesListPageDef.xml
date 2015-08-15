@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.1.3.10.8" id="countriesListPageDef"
+                Package="countries">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Regions" RangeSize="25" DataControl="UC001ServiceDataControl" id="RegionsIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="RegionsIterator" id="Regions">
+      <nodeDefinition DefName="com.company.project.uc001.model.vo.RegionsVO" Name="Regions0">
+        <AttrNames>
+          <Item Value="RegionName"/>
+        </AttrNames>
+        <Accessors>
+          <Item Value="Countries"/>
+        </Accessors>
+      </nodeDefinition>
+      <nodeDefinition DefName="com.company.project.uc001.model.vo.CountriesVO" Name="Regions1">
+        <AttrNames>
+          <Item Value="CountryId"/>
+          <Item Value="CountryName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

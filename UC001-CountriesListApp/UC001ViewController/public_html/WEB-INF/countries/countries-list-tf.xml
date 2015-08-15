@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="countries-list-tf">
+    <template-reference>
+      <document>/WEB-INF/templates/taskflow/default-template.xml</document>
+      <id>default-template</id>
+    </template-reference>
+    <default-activity>countriesList</default-activity>
+    <view id="countriesList">
+      <page>/WEB-INF/countries/countriesList.jsff</page>
+    </view>
+    <use-page-fragments/>
+  </task-flow-definition>
+</adfc-config>

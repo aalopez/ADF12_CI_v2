@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.1.3.10.8" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.company.project.uc001.view" ClientType="Generic">
+  <pageMap>
+    <page path="/WEB-INF/countries/countriesList.jsff" usageId="com_company_project_uc001_view_countriesListPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_company_project_uc001_view_countriesListPageDef" path="countries.countriesListPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="UC001ServiceDataControl" Package="com.company.project.uc001.model.am"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="UC001ServiceLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
