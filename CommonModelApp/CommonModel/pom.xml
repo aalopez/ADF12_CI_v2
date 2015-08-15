@@ -115,57 +115,128 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- Adds info to the classpath required for ADFBC Unit tests. This is a workaround https://blogs.oracle.com/groundside/entry/maven_and_adfbc_unit_tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.17</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.surefire</groupId>
+                        <artifactId>surefire-junit47</artifactId>
+                        <version>2.17</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>${basedir}/../.adf</additionalClasspathElement>
+                        <additionalClasspathElement>${env.ORACLE_HOME}/oracle_common/modules/oracle.jps_12.1.3/jps-manifest.jar</additionalClasspathElement>
+                    </additionalClasspathElements>
+                </configuration>
+            </plugin>
         </plugins>
+        <testSourceDirectory>../CommonModelTest/src/</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>../CommonModelTest/</directory>
+                <includes>
+                    <include>*</include>
+                </includes>
+            </testResource>
+        </testResources>
+        <testOutputDirectory>../CommonModelTest/classes/</testOutputDirectory>
     </build>
     <dependencies>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
-            <artifactId>BC4J-Runtime</artifactId>
+            <artifactId>JUnit-4-Runtime</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>JUnit-Runtime</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
             <artifactId>ADF-Model-Runtime</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
-            <artifactId>MDS-Runtime</artifactId>
+            <artifactId>Oracle-XML-Parser-v2</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
-            <artifactId>MDS-Runtime-Dependencies</artifactId>
+            <artifactId>JDeveloper-Runtime</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
-            <artifactId>BC4J-Security</artifactId>
+            <artifactId>BC4J-Runtime</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>SQLJ-Runtime</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
             <artifactId>Oracle-JDBC</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>Connection-Manager</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
             <artifactId>BC4J-Oracle-Domains</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
-            <scope>provided</scope>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>MDS-Runtime</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>MDS-Runtime-Dependencies</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.oracle.adf.library</groupId>
+            <artifactId>BC4J-Security</artifactId>
+            <version>12.1.3-0-0</version>
+            <type>pom</type>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
@@ -185,8 +256,8 @@
             <groupId>com.company.project.common</groupId>
             <artifactId>CommonCode</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
             <type>jar</type>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>
