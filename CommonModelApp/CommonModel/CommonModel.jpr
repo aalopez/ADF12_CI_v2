@@ -107,6 +107,10 @@
    <value n="oracle.jbo.AMPackage" v="am"/>
    <value n="oracle.jbo.ASPackage" v="eo.assoc"/>
    <value n="oracle.jbo.EOPackage" v="eo"/>
+   <value n="oracle.jbo.extends.appModule" v="com.company.project.common.code.fwk.ApplicationModuleImpl"/>
+   <value n="oracle.jbo.extends.entityRow" v="com.company.project.common.code.fwk.EntityImpl"/>
+   <value n="oracle.jbo.extends.viewObj" v="com.company.project.common.code.fwk.ViewObjectImpl"/>
+   <value n="oracle.jbo.extends.viewRow" v="com.company.project.common.code.fwk.ViewRowImpl"/>
    <value n="oracle.jbo.ObjAMSuffix" v="AM"/>
    <value n="oracle.jbo.ObjAssocSuffix" v="Assoc"/>
    <value n="oracle.jbo.ObjEOSuffix" v="EO"/>
@@ -212,10 +216,6 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar.lastUpdated"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="BC4J Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -249,6 +249,10 @@
          </hash>
          <hash>
             <value n="id" v="ADF Common Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -263,13 +267,18 @@
                <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar.lastUpdated"/>
                <value n="locked" v="true"/>
             </hash>
+            <hash>
+               <list n="classPath">
+                  <url protocol="file" path="${maven:maven.local.repo}com/company/project/common/CommonCode/1.0-SNAPSHOT/CommonCode-1.0-SNAPSHOT.jar"/>
+               </list>
+               <value n="deployedByDefault" v="true"/>
+               <value n="description" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar"/>
+               <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar"/>
+               <value n="locked" v="true"/>
+            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
-         <hash>
-            <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar.lastUpdated"/>
-            <value n="isJDK" v="false"/>
-         </hash>
          <hash>
             <value n="id" v="BC4J Runtime"/>
             <value n="isJDK" v="false"/>
@@ -304,6 +313,10 @@
          </hash>
          <hash>
             <value n="id" v="ADF Common Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="com.company.project.common:CommonCode:1.0-SNAPSHOT:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
