@@ -32,6 +32,45 @@
             </resource>
         </resources>
         <plugins>
+            <!-- Avoids default jar creation -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>default-jar</id>
+                        <phase></phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Avoids default installation and installs the ADF Library Jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.5.2</version>
+                <executions>
+                    <execution>
+                        <id>default-install</id>
+                        <phase></phase>
+                    </execution>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <generatePom>true</generatePom>
+                            <artifactId>${project.artifactId}</artifactId>
+                            <groupId>${project.groupId}</groupId>
+                            <version>${project.version}</version>
+                            <packaging>jar</packaging>
+                            <file>${project.build.directory}/${ojdeploy.profile.name}-${project.version}.jar</file>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Creates ADF Library Jar -->
             <plugin>
                 <groupId>com.oracle.adf.plugin</groupId>
                 <artifactId>ojdeploy</artifactId>
@@ -40,8 +79,9 @@
                     <ojdeploy>${oracleHome}/jdeveloper/jdev/bin/ojdeploy</ojdeploy>
                     <workspace>${basedir}/../UC001-CountriesListApp.jws</workspace>
                     <project>UC001ViewController</project>
-                    <profile>adflibUC001ViewController</profile>
+                    <profile>${ojdeploy.profile.name}</profile>
                     <usemaven>true</usemaven>
+                    <outputfile>${project.build.directory}/${profile.name}-${project.version}.jar</outputfile>
                 </configuration>
                 <executions>
                     <execution>
@@ -49,6 +89,29 @@
                         <goals>
                             <goal>deploy</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Deploys ADF Library Jar -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <executions>
+                    <execution>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy-file</goal>
+                        </goals>
+                        <configuration>
+                            <generatePom>true</generatePom>
+                            <repositoryId>snapshots</repositoryId>
+                            <url>${project.distributionManagement.snapshotRepository.url}</url>
+                            <artifactId>${project.artifactId}</artifactId>
+                            <groupId>${project.groupId}</groupId>
+                            <version>${project.version}</version>
+                            <file>${project.build.directory}/${ojdeploy.profile.name}-${project.version}.jar</file>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
