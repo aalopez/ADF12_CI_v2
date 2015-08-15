@@ -32,12 +32,28 @@
             </resource>
         </resources>
         <plugins>
-            <!-- Installs the ADF Library Jar -->
+            <!-- Avoids default jar creation  since every project will use ojdeploy -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <id>default-jar</id>
+                        <phase></phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Avoids default installation since every project will install the ojdeploy result -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-install-plugin</artifactId>
                 <version>2.5.2</version>
                 <executions>
+                    <execution>
+                        <id>default-install</id>
+                        <phase></phase>
+                    </execution>
                     <execution>
                         <phase>install</phase>
                         <goals>
