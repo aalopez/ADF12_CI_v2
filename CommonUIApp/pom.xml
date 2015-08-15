@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.company.project.common.ui</groupId>
+  <artifactId>CommonUIApp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <description>Super POM for CommonUIApp</description>
+  <modules>
+    <module>CommonUI</module>
+  </modules>
+  <packaging>pom</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>com.company.project.common</groupId>
+      <artifactId>CommonUI</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+</project>
