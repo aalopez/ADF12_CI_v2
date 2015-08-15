@@ -9,7 +9,8 @@
   DBObjectType="table"
   DBObjectName="REGIONS"
   AliasName="RegionsEO"
-  BindingStyle="OracleName">
+  BindingStyle="OracleName"
+  xmlns:validation="http://xmlns.oracle.com/adfm/validation">
   <Attribute
     Name="RegionId"
     IsNotNull="true"
@@ -74,6 +75,26 @@
     </DesignTime>
     <AttrArray Name="Attributes"/>
   </Key>
+  <Key
+    Name="RegionNameUK"
+    AltKey="true">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="REGIONS"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.company.project.common.model.eo.RegionsEO.RegionName"/>
+    </AttrArray>
+  </Key>
+  <validation:UniqueKeyValidationBean
+    Name="RegionNameUKRule"
+    ResId="com.company.project.common.model.eo.RegionsEO_Rule_0"
+    KeyName="RegionNameUK">
+    <validation:OnAttributes>
+      <validation:Item
+        Value="RegionName"/>
+    </validation:OnAttributes>
+  </validation:UniqueKeyValidationBean>
   <ResourceBundle>
     <PropertiesBundle
       PropertiesFile="com.company.project.common.model.res.CommonModelBundle"/>

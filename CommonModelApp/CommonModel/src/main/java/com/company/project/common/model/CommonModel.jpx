@@ -11,7 +11,16 @@
     <Attr Name="_jprName" Value="../../../../../../../../CommonModel.jpr"/>
     <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
     <Attr Name="_NamedConnection" Value="HR"/>
+    <Attr Name="_appModuleNames0" Value="com.company.project.common.model.am.LOVService"/>
   </DesignTime>
+  <Containee
+    Name="am"
+    PackageName="com.company.project.common.model.am"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
   <Containee
     Name="assoc"
     PackageName="com.company.project.common.model.eo.assoc"
@@ -26,6 +35,22 @@
     ObjectType="JboPackage">
     <DesignTime>
       <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="lov"
+    PackageName="com.company.project.common.model.vo.lov"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="vo"
+    PackageName="com.company.project.common.model.vo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
     </DesignTime>
   </Containee>
 </JboProject>
