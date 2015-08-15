@@ -32,4 +32,14 @@
          <url n="pomfileURL" path="pom.xml"/>
       </hash>
    </hash>
+   <hash n="oracle.jdeveloper.model.PathsConfiguration">
+      <hash n="ApplicationSrcContentSet">
+         <list n="pattern-filters">
+            <string v="+**"/>
+         </list>
+         <list n="url-path">
+            <url path="src/main/resources/"/>
+         </list>
+      </hash>
+   </hash>
 </jws:workspace>
