@@ -52,6 +52,15 @@
                 </executions>
             </plugin>
         </plugins>
+        <testSourceDirectory>../CommonCodeTest/src/</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>../CommonCodeTest/</directory>
+                <includes>
+                    <include>*</include>
+                </includes>
+            </testResource>
+        </testResources>
     </build>
     <dependencies>
         <dependency>
