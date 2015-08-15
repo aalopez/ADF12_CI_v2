@@ -16,7 +16,7 @@
         </afc:component>
     </af:xmlContent>
     <af:panelGridLayout id="pt_pgl1">
-        <af:gridRow height="50px" id="pt_gr2">
+        <af:gridRow height="50px" id="pt_gr2" rendered="#{attrs.showHeader}">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc2">
                 <!-- Header -->
             </af:gridCell>
@@ -24,6 +24,7 @@
         <af:gridRow height="100%" id="pt_gr1">
             <af:gridCell width="100%" halign="stretch" valign="stretch" id="pt_gc1">
                 <!-- Content -->
+                <af:facetRef facetName="center"/>
             </af:gridCell>
         </af:gridRow>
     </af:panelGridLayout>
