@@ -5,10 +5,58 @@
   <artifactId>MasterApp</artifactId>
   <version>1.0-SNAPSHOT</version>
   <description>Super POM for MasterApp</description>
+  <packaging>pom</packaging>
+  <properties>
+    <ojdeploy.profile.name>projectMaster</ojdeploy.profile.name>
+    <!-- Avoids default jar deployment -->
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+  <parent>
+    <groupId>com.company.project.parent</groupId>
+    <artifactId>ParentProject</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../ParentApp/Parent/pom.xml</relativePath>
+  </parent>
   <modules>
     <module>Master</module>
   </modules>
-  <packaging>pom</packaging>
+  <build>
+    <plugins>
+      <!-- Avoids default installation -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.5.2</version>
+        <executions>
+          <execution>
+            <id>default-install</id>
+            <phase></phase>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Creates EAR -->
+      <plugin>
+        <groupId>com.oracle.adf.plugin</groupId>
+        <artifactId>ojdeploy</artifactId>
+        <version>12.1.3-0-0</version>
+        <configuration>
+          <ojdeploy>${oracleHome}/jdeveloper/jdev/bin/ojdeploy</ojdeploy>
+          <workspace>${basedir}/MasterApp.jws</workspace>
+          <profile>${ojdeploy.profile.name}</profile>
+          <usemaven>true</usemaven>
+          <outputfile>${project.build.directory}/${profile.name}-${project.version}.ear</outputfile>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>deploy</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
     <dependency>
       <groupId>com.company.project.master</groupId>
