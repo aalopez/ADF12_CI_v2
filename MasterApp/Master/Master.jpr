@@ -180,6 +180,16 @@
                         </list>
                      </hash>
                      <value n="internalName" v="libraries"/>
+                     <list n="selectedLibraries">
+                        <string v="Trinidad Runtime 11"/>
+                        <string v="BC4J Runtime"/>
+                        <string v="ADF Faces Runtime 11"/>
+                        <string v="ADF DVT Faces Runtime"/>
+                        <string v="ADF Web Runtime"/>
+                        <string v="ADF Common Web Runtime"/>
+                        <string v="ADF Controller Runtime"/>
+                        <string v="ADF Page Flow Runtime"/>
+                     </list>
                      <value n="targetWithinJar" v="WEB-INF/lib"/>
                      <value n="type" v="3"/>
                   </hash>
@@ -340,6 +350,14 @@
             <value n="id" v="Oracle Page Templates"/>
             <value n="isJDK" v="false"/>
          </hash>
+         <hash>
+            <value n="id" v="Trinidad Runtime 11"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
+            <value n="isJDK" v="false"/>
+         </hash>
       </list>
       <hash n="internalDefinitions">
          <list n="libraryDefinitions">
@@ -488,6 +506,14 @@
          </hash>
          <hash>
             <value n="id" v="Oracle Page Templates"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="Trinidad Runtime 11"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="BC4J Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
