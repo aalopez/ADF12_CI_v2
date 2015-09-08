@@ -93,14 +93,6 @@
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
-            <value n="id" v="JUnit 4 Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JUnit Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="ADF Model Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -142,6 +134,10 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="junit:junit:4.11:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -159,14 +155,6 @@
       </hash>
       <list n="libraryReferences">
          <hash>
-            <value n="id" v="JUnit 4 Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="JUnit Runtime"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
             <value n="id" v="ADF Model Runtime"/>
             <value n="isJDK" v="false"/>
          </hash>
@@ -208,6 +196,10 @@
          </hash>
          <hash>
             <value n="id" v="BC4J Security"/>
+            <value n="isJDK" v="false"/>
+         </hash>
+         <hash>
+            <value n="id" v="junit:junit:4.11:jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

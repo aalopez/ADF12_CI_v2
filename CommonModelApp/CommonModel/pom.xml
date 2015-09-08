@@ -156,20 +156,6 @@
     <dependencies>
         <dependency>
             <groupId>com.oracle.adf.library</groupId>
-            <artifactId>JUnit-4-Runtime</artifactId>
-            <version>12.1.3-0-0</version>
-            <type>pom</type>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.adf.library</groupId>
-            <artifactId>JUnit-Runtime</artifactId>
-            <version>12.1.3-0-0</version>
-            <type>pom</type>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.oracle.adf.library</groupId>
             <artifactId>ADF-Model-Runtime</artifactId>
             <version>12.1.3-0-0</version>
             <type>pom</type>
@@ -265,6 +251,13 @@
             <version>1.0-SNAPSHOT</version>
             <type>jar</type>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+            <type>jar</type>
         </dependency>
     </dependencies>
 </project>
